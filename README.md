@@ -40,12 +40,23 @@
 </div>
 
 
-  [![Contributors][contributors-shield]][contributors-url]
-  [![Forks][forks-shield]][forks-url]
-  [![Stars][stars-shield]][stars-url]
-  [![Issues][issues-shield]][issues-url]
-  [![License][license-shield]][license-url]
-
+<p align="center">
+  <a href="https://github.com/Binary1Brains/EvalBuddy/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Binary1Brains/EvalBuddy?style=flat" />
+  </a>
+  <a href="https://github.com/Binary1Brains/EvalBuddy/network/members">
+    <img src="https://img.shields.io/github/forks/Binary1Brains/EvalBuddy?style=flat" />
+  </a>
+  <a href="https://github.com/Binary1Brains/EvalBuddy/stargazers">
+    <img src="https://img.shields.io/github/stars/Binary1Brains/EvalBuddy?style=flat" />
+  </a>
+  <a href="https://github.com/Binary1Brains/EvalBuddy/issues">
+    <img src="https://img.shields.io/github/issues/Binary1Brains/EvalBuddy?style=flat" />
+  </a>
+  <a href="https://github.com/Binary1Brains/EvalBuddy/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Binary1Brains/EvalBuddy?style=flat" />
+  </a>
+</p>
 
 <details>
   <summary>Table of Contents</summary>
