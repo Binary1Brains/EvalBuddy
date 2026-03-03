@@ -150,7 +150,6 @@ Graph Insights: Open your Neo4j browser to view the generated :KNOWS and :WEAK_I
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Contact
-[linkedin-badge]: https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white
 | Name | LinkedIn |
 | :--- | :--- |
 | **Bhishal Sikdar** | [![LinkedIn][linkedin-badge]][bhishal-url] |
@@ -182,7 +181,7 @@ Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
 [Vite-url]: https://vitejs.dev/
 [Tailwind-badge]: https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat&logo=tailwindcss&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
-
+[linkedin-badge]: https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white
 
 [log]: beauty/ui.jpeg
 [dash]: beauty/ui1.jpeg
