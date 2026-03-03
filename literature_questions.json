@@ -1,0 +1,23 @@
+[
+    {
+        "id": "Q1",
+        "topic": "English Literature",
+        "question": "Discuss the theme of The Time Machine.",
+        "model_answer": "Class Conflict and Social Criticism is the central theme of The Time Machine. H.G. Wells uses the division of humanity into the Eloi and Morlocks to critique the rigid class system of Victorian England. The Eloi, representing the idle upper class, are beautiful but intellectually and physically weak, while the Morlocks, the descendants of the oppressed working class, are subterranean, industrious, and monstrous—symbolizing the dehumanizing effects of exploitation and social inequality.",
+        "concepts": ["class conflict", "social criticism", "caste system", "oppression", "oppressed working class", "Eloi upper class", "Morlocks oppressed lower class"]
+    },
+    {
+        "id": "Q2",
+        "topic": "English Literature",
+        "question": "Explain the significance of the green light in The Great Gatsby.",
+        "model_answer": "The green light represents Gatsby's hopes and dreams for the future, particularly his desire to reunite with Daisy.",
+        "concepts": ["green light", "symbolism", "hope", "dreams", "Daisy"]
+    },
+    {
+        "id": "Q3",
+        "topic": "English Literature",
+        "question": "Analyze the theme of isolation in Mary Shelley's Frankenstein.",
+        "model_answer": "The monster's isolation from society and Victor's self-imposed isolation both highlight the dangers of alienation and the need for companionship.",
+        "concepts": ["isolation", "alienation", "companionship", "monster", "Victor"]
+    }
+]
