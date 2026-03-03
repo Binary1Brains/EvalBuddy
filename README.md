@@ -193,6 +193,6 @@ Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
 [dash]: beauty/ui1.jpeg
 [graph-screenshot]: beauty/ui2.jpeg
 [license-shield]: https://img.shields.io/github/license/Binary1Brains/EvalBuddy.svg?style=flat
-[license-url]: https://github.com/Binary1Brains/EvalBuddy/LICENSE
+[license-url]: https://github.com/Binary1Brains/EvalBuddy/blob/main/LICENSE
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
