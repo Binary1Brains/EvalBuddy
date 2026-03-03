@@ -1,135 +1,135 @@
-# EvalBuddy  
-### Intelligent Descriptive Answer Evaluation & Suggestion Platform
+<a id="readme-top"></a>
 
-EvalBuddy is an AI-powered system that evaluates descriptive answers using semantic understanding, concept coverage detection, OCR-based answer extraction, and knowledge graph-driven learning analytics.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-This platform moves beyond keyword matching and enables meaning-level evaluation, structured feedback, and personalized study recommendations.
+<br />
+<div align="center">
+  <a href="https://github.com/Binary1Brains/EvalBuddy">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
----
+<h3 align="center">EvalBuddy</h3>
 
-## Problem Statement
+  <p align="center">
+    An End-to-End Automated Grading and Knowledge Mapping System.
+    <br />
+    From Handwritten Ink to Actionable Pedagogical Insights.
+    <br />
+    <a href="https://github.com/Binary1Brains/EvalBuddy"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/Binary1Brains/EvalBuddy">View Demo</a>
+    &middot;
+    <a href="https://github.com/Binary1Brains/EvalBuddy/issues">Report Bug</a>
+    &middot;
+    <a href="https://github.com/Binary1Brains/EvalBuddy/issues">Request Feature</a>
+  </p>
+</div>
 
-Traditional evaluation systems rely on keyword matching and surface-level scoring.  
-They fail to:
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#key-features">Key Features</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-- Understand semantic meaning  
-- Detect missing concepts  
-- Provide structured feedback  
-- Track topic-wise mastery  
+## About The Project
 
-EvalBuddy addresses these challenges using Natural Language Processing, Transformer models, and Knowledge Graphs.
+[![EvalBuddy Screen Shot][product-screenshot]](https://github.com/Binary1Brains/EvalBuddy)
 
----
+EvalBuddy is designed to solve the "21st Century Grading Problem." While most assessment is digital, a vast amount of education still happens on paper. EvalBuddy bridges this gap by using a multi-stage AI pipeline to transcribe, evaluate, and map student knowledge.
 
-## Core Features
+### Key Features:
+* **Handwriting to Text:** Fine-tuned `TrOCR` (Vision Transformer) handles complex student handwriting.
+* **Intelligent Evaluation:** Uses the `Themis` LLM for qualitative grading and feedback.
+* **Semantic Analysis:** Mathematical concept coverage checking via `Sentence-Transformers`.
+* **Knowledge Mapping:** Results are stored in a `Neo4j` Graph Database to visualize learning gaps and recommend study topics.
 
-### Semantic Answer Evaluation
-- Converts model and student answers into embeddings
-- Uses cosine similarity to measure semantic closeness
-- Evaluates understanding even with different wording
+### Built With
 
-### Concept Coverage Detection
-- Detects presence of predefined key concepts
-- Identifies covered and missing topics
-- Enables structured scoring
+* [![Python][Python-badge]][Python-url]
+* [![PyTorch][PyTorch-badge]][PyTorch-url]
+* [![HuggingFace][HF-badge]][HF-url]
+* [![Neo4j][Neo4j-badge]][Neo4j-url]
+* [![OpenCV][OpenCV-badge]][OpenCV-url]
 
-### OCR-Based Answer Extraction
-- Reads handwritten or scanned answer sheets
-- Uses Transformer-based OCR model (TrOCR)
-- Converts images to clean text for evaluation
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Knowledge Graph Tracking
-- Stores student-topic relationships
-- Tracks mastery levels
-- Identifies weak concepts
-- Enables intelligent study recommendations
+## Getting Started
 
----
+To get EvalBuddy running locally, follow these steps.
 
-## System Architecture
-Student Input (Text or Image)
-↓
-OCR Engine (if image input)
-↓
-Answer Parser
-↓
-Semantic Engine
-↓
-Concept Coverage Detector
-↓
-Knowledge Graph Update
-↓
-Final Evaluation & Feedback
+### Prerequisites
 
----
+* Python 3.11+
+* Neo4j Database (Local or Aura)
+* CUDA-capable GPU (Recommended for LLM inference)
 
-## Repository Structure
+### Installation
 
-semantic_engine.py → Semantic similarity and concept detection
-knowledge_graph.py → Neo4j-based learning graph logic
-exam_ocr.py → OCR for scanned/handwritten answers
-answer_parser.py → Answer preprocessing and parsing
-eval.py / run_evaluation.py → Evaluation orchestration
-themis_evaluator.py → Custom scoring logic
-literature_questions.json → Sample dataset
-pretraining.py → Data preparation/training logic
-trocr-handwriting/ → OCR model checkpoint
-requirements.txt → Project dependencies
+1. Clone the repo
+   ```sh
+   git clone [https://github.com/Binary1Brains/EvalBuddy.git](https://github.com/Binary1Brains/EvalBuddy.git)
+Install dependencies
 
----
+Bash
+pip install torch transformers sentence-transformers neo4j opencv-python symspellpy
+Set up your Neo4j credentials in run_evaluation.py
 
-## Technologies Used
+Python
+kg = KnowledgeGraph("bolt://localhost:7687", "username", "password")
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- Python
-- Sentence Transformers
-- HuggingFace Transformers
-- TrOCR (OCR model)
-- Neo4j (Knowledge Graph)
-- NLTK
-- Cosine Similarity
-- JSON-based datasets
+Usage
+OCR Ingestion: Place student exam images in the input folder and run exam_ocr.py.
 
----
+Evaluation: Run run_evaluation.py to trigger the Themis LLM and Semantic Engine.
 
-## Evaluation Metrics
+Graph Insights: Open your Neo4j browser to view the generated :KNOWS and :WEAK_IN relationships.
 
-- Semantic Similarity Score
-- Concept Coverage Percentage
-- Missing Concept Detection
-- Final Composite Score
-- Learning Progress Tracking
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
----
+Roadmap
+[x] Fine-tune TrOCR on IAM-line dataset
 
-## How It Works
+[x] Implement 4-bit Quantization for LLM Efficiency
 
-### Step 1: Semantic Embedding
-Model and student answers are converted into dense vector representations using a transformer model.
+[x] Neo4j Knowledge Graph Integration
 
-### Step 2: Similarity Computation
-Cosine similarity is calculated to measure conceptual alignment.
+[ ] Multi-language Handwriting Support
 
-### Step 3: Concept Detection
-The system checks whether required key concepts are present in the student response.
+[ ] Real-time Teacher Dashboard UI
 
-### Step 4: Knowledge Graph Update
-Student-topic mastery relationships are updated in Neo4j.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
----
+Contact
+Bhishal Sikdar - LinkedIn
+Parijat Dhar - LinkedIn
+Soham Dutta - LinkedIn
+Sumit Dey - LinkedIn
 
-## Installation
+Project Link: https://github.com/Binary1Brains/EvalBuddy
 
-### Clone Repository
-git clone https://github.com/Binary1Brains/EvalBuddy.git
-cd EvalBuddy
-
-### Install Dependencies
-pip install -r requirements.txt
-
-### Setup Neo4j
-- Install Neo4j Desktop
-- Create a local database
-- Update connection credentials in knowledge_graph.py
-
-### Run Evaluation
-python run_evaluation.py
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
