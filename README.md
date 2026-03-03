@@ -31,7 +31,7 @@
     <a href="https://github.com/Binary1Brains/EvalBuddy"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Binary1Brains/EvalBuddy">View Demo</a>
+    <a href="https://www.youtube.com/watch?v=TUpcQ1S0bWM">View Demo</a>
     &middot;
     <a href="https://github.com/Binary1Brains/EvalBuddy/issues">Report Bug</a>
     &middot;
@@ -65,6 +65,9 @@
 </details>
 
 ## About The Project
+
+### License
+[![MIT License][license-shield]][license-url]
 
 ### System Workflow
 | 📄 1. Login Interface | 🧠 2. Teacher Dashboard | 🕸️ 3. Knowledge Graph |
@@ -189,5 +192,7 @@ Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
 [log]: beauty/ui.jpeg
 [dash]: beauty/ui1.jpeg
 [graph-screenshot]: beauty/ui2.jpeg
+[license-shield]: https://img.shields.io/github/license/Binary1Brains/EvalBuddy.svg?style=flat
+[license-url]: https://github.com/Binary1Brains/EvalBuddy/blob/main/LICENSE
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
