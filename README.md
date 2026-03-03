@@ -182,7 +182,10 @@ Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
 [Tailwind-badge]: https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat&logo=tailwindcss&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/
 [linkedin-badge]: https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white
-
+[bhishal-url]: https://www.linkedin.com/in/bhishal-sikdar
+[parijat-url]: https://www.linkedin.com/in/parijat-dhar-3b17a329a
+[soham-url]: https://www.linkedin.com/in/soham-dutta-94630a29a
+[sumit-url]: https://www.linkedin.com/in/sumit-dey-3686842a3
 [log]: beauty/ui.jpeg
 [dash]: beauty/ui1.jpeg
 [graph-screenshot]: beauty/ui2.jpeg
