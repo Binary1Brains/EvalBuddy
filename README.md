@@ -18,7 +18,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Binary1Brains/EvalBuddy">
-    <img src="beauty/logo.jpgg" alt="Logo" width="80" height="80">
+    <img src="beauty/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">EvalBuddy</h3>
@@ -101,17 +101,17 @@ To get EvalBuddy running locally, follow these steps.
 1. Clone the repo
    ```sh
    git clone [https://github.com/Binary1Brains/EvalBuddy.git](https://github.com/Binary1Brains/EvalBuddy.git)
-Install dependencies
+2. Install dependencies
 
 Bash
 pip install torch transformers sentence-transformers neo4j opencv-python symspellpy
-Set up your Neo4j credentials in run_evaluation.py
+3. Set up your Neo4j credentials in run_evaluation.py
 
-Python
+4. Python
 kg = KnowledgeGraph("bolt://localhost:7687", "username", "password")
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Usage
+### Usage
 OCR Ingestion: Place student exam images in the input folder and run exam_ocr.py.
 
 Evaluation: Run run_evaluation.py to trigger the Themis LLM and Semantic Engine.
@@ -120,7 +120,7 @@ Graph Insights: Open your Neo4j browser to view the generated :KNOWS and :WEAK_I
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Roadmap
+### Roadmap
 [x] Fine-tune TrOCR on IAM-line dataset
 
 [x] Implement 4-bit Quantization for LLM Efficiency
@@ -133,7 +133,7 @@ Roadmap
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Contact
+### Contact
 Bhishal Sikdar - www.linkedin.com/in/bhishal-sikdar
 Parijat Dhar - www.linkedin.com/in/parijat-dhar-3b17a329a
 Soham Dutta - www.linkedin.com/in/soham-dutta-94630a29a
