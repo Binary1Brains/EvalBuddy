@@ -70,7 +70,7 @@
 | 📄 1. Login Interface | 🧠 2. Teacher Dashboard | 🕸️ 3. Knowledge Graph |
 | :---: | :---: | :---: |
 | [![Login Screenshot][log]](https://github.com/Binary1Brains/EvalBuddy) | [![Dashboard Screenshot][dash]](https://github.com/Binary1Brains/EvalBuddy) | [![Graph Screenshot][graph-screenshot]](https://github.com/Binary1Brains/EvalBuddy) |
-| *Secure Access Layer* | *LLM Evaluation Results* | *Neo4j Knowledge Mapping* |
+| *Secure Access Layer* | *Dashboard* | *Neo4j Knowledge Mapping* |
 
 EvalBuddy is designed to solve the "21st Century Grading Problem." While most assessment is digital, a vast amount of education still happens on paper. EvalBuddy bridges this gap by using a multi-stage AI pipeline to transcribe, evaluate, and map student knowledge.
 
@@ -163,7 +163,7 @@ Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
 [OpenCV-url]: https://opencv.org/
 
 [log]: beauty/ui.jpeg
-[dash]: beauty/ui1.png
+[dash]: beauty/ui1.jpeg
 [graph-screenshot]: beauty/ui_2.jpeg
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
