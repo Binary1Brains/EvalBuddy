@@ -87,6 +87,10 @@ EvalBuddy is designed to solve the "21st Century Grading Problem." While most as
 * [![HuggingFace][HF-badge]][HF-url]
 * [![Neo4j][Neo4j-badge]][Neo4j-url]
 * [![OpenCV][OpenCV-badge]][OpenCV-url]
+* [![React][React-badge]][React-url]
+* [![Vite][Vite-badge]][Vite-url]
+* [![Tailwind][Tailwind-badge]][Tailwind-url]
+* [![Neo4j][Neo4j-badge]][Neo4j-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,6 +111,7 @@ To get EvalBuddy running locally, follow these steps.
 1. Clone the repo
    ```sh
    git clone [https://github.com/Binary1Brains/EvalBuddy.git](https://github.com/Binary1Brains/EvalBuddy.git)
+   cd EvalBuddy
 2. Install dependencies
    ```Bash
    pip install -r requirements.txt
@@ -132,17 +137,26 @@ Graph Insights: Open your Neo4j browser to view the generated :KNOWS and :WEAK_I
 
 [x] Neo4j Knowledge Graph Integration
 
+[x] Front End
+
 [ ] Multi-language Handwriting Support
 
+[ ] Multi subject support (LATEXOCR, FR-DETR)
+
 [ ] Real-time Teacher Dashboard UI
+
+[ ] Backend 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Contact
-1. Bhishal Sikdar - www.linkedin.com/in/bhishal-sikdar
-2. Parijat Dhar - www.linkedin.com/in/parijat-dhar-3b17a329a
-3. Soham Dutta - www.linkedin.com/in/soham-dutta-94630a29a
-4. Sumit Dey - www.linkedin.com/in/sumit-dey-3686842a3
+[linkedin-badge]: https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white
+| Name | LinkedIn |
+| :--- | :--- |
+| **Bhishal Sikdar** | [![LinkedIn][linkedin-badge]][bhishal-url] |
+| **Parijat Dhar** | [![LinkedIn][linkedin-badge]][parijat-url] |
+| **Soham Dutta** | [![LinkedIn][linkedin-badge]][soham-url] |
+| **Sumit Dey** | [![LinkedIn][linkedin-badge]][sumit-url] |
 
 Project Link: https://github.com/Binary1Brains/EvalBuddy
 Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
@@ -161,6 +175,14 @@ Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
 
 [OpenCV-badge]: https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white
 [OpenCV-url]: https://opencv.org/
+
+[React-badge]: https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black
+[React-url]: https://reactjs.org/
+[Vite-badge]: https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
+[Tailwind-badge]: https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat&logo=tailwindcss&logoColor=white
+[Tailwind-url]: https://tailwindcss.com/
+
 
 [log]: beauty/ui.jpeg
 [dash]: beauty/ui1.jpeg
