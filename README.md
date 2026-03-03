@@ -66,7 +66,11 @@
 
 ## About The Project
 
-[![Login_screenshot][log]](https://github.com/Binary1Brains/EvalBuddy/beauty/ui.jpeg) | [![Dashboard][dash]](https://github.com/Binary1Brains/EvalBuddy) | [![Graph Screenshot][graph-screenshot]](https://github.com/Binary1Brains/EvalBuddy/beauty/ui_2.jpeg)
+### System Workflow
+| 📄 1. Login Interface | 🧠 2. Teacher Dashboard | 🕸️ 3. Knowledge Graph |
+| :---: | :---: | :---: |
+| [![Login Screenshot][log]](https://github.com/Binary1Brains/EvalBuddy) | [![Dashboard Screenshot][dash]](https://github.com/Binary1Brains/EvalBuddy) | [![Graph Screenshot][graph-screenshot]](https://github.com/Binary1Brains/EvalBuddy) |
+| *Secure Access Layer* | *LLM Evaluation Results* | *Neo4j Knowledge Mapping* |
 
 EvalBuddy is designed to solve the "21st Century Grading Problem." While most assessment is digital, a vast amount of education still happens on paper. EvalBuddy bridges this gap by using a multi-stage AI pipeline to transcribe, evaluate, and map student knowledge.
 
@@ -157,5 +161,9 @@ Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
 
 [OpenCV-badge]: https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white
 [OpenCV-url]: https://opencv.org/
+
+[log]: beauty/ui.jpeg
+[dash]: beauty/ui1.png
+[graph-screenshot]: beauty/ui_2.jpeg
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
