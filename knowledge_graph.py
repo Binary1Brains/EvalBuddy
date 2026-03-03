@@ -78,4 +78,4 @@ class KnowledgeGraph:
         with self.driver.session() as session:
             return [r["topic"] for r in session.run(query, sid=student_id)]        
         
-          b
+          

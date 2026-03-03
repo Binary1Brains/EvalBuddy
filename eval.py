@@ -1,4 +1,3 @@
-
 import torch
 import evaluate
 from transformers import VisionEncoderDecoderModel, TrOCRProcessor
@@ -7,7 +6,7 @@ from datasets import load_dataset
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model = VisionEncoderDecoderModel.from_pretrained(
-    "path_to_fine_tuned_model/trocr-handwriting/checkpoint-12000"
+    "/home/parijat/machine_learning/CU/trocr-handwriting/checkpoint-12000"
 ).to(device)
 
 processor = TrOCRProcessor.from_pretrained(
