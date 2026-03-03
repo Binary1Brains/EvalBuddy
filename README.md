@@ -1,15 +1,24 @@
 <a id="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[contributors-shield]: https://img.shields.io/github/contributors/Binary1Brains/EvalBuddy.svg?style=flat
+[contributors-url]: https://github.com/Binary1Brains/EvalBuddy/graphs/contributors
+
+[forks-shield]: https://img.shields.io/github/forks/Binary1Brains/EvalBuddy.svg?style=flat
+[forks-url]: https://github.com/Binary1Brains/EvalBuddy/network/members
+
+[stars-shield]: https://img.shields.io/github/stars/Binary1Brains/EvalBuddy.svg?style=flat
+[stars-url]: https://github.com/Binary1Brains/EvalBuddy/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/Binary1Brains/EvalBuddy.svg?style=flat
+[issues-url]: https://github.com/Binary1Brains/EvalBuddy/issues
+
+[license-shield]: https://img.shields.io/github/license/Binary1Brains/EvalBuddy.svg?style=flat
+[license-url]: https://github.com/Binary1Brains/EvalBuddy/blob/master/LICENSE.txt
 
 <br />
 <div align="center">
   <a href="https://github.com/Binary1Brains/EvalBuddy">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="beauty/logo.jpgg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">EvalBuddy</h3>
@@ -125,11 +134,26 @@ Roadmap
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 Contact
-Bhishal Sikdar - LinkedIn
-Parijat Dhar - LinkedIn
-Soham Dutta - LinkedIn
-Sumit Dey - LinkedIn
+Bhishal Sikdar - www.linkedin.com/in/bhishal-sikdar
+Parijat Dhar - www.linkedin.com/in/parijat-dhar-3b17a329a
+Soham Dutta - www.linkedin.com/in/soham-dutta-94630a29a
+Sumit Dey - www.linkedin.com/in/sumit-dey-3686842a3
 
 Project Link: https://github.com/Binary1Brains/EvalBuddy
+
+[Python-badge]: https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white
+[Python-url]: https://www.python.org/
+
+[PyTorch-badge]: https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white
+[PyTorch-url]: https://pytorch.org/
+
+[HF-badge]: https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FFD21E?style=flat&logoColor=black
+[HF-url]: https://huggingface.co/
+
+[Neo4j-badge]: https://img.shields.io/badge/Neo4j-008CC1?style=flat&logo=neo4j&logoColor=white
+[Neo4j-url]: https://neo4j.com/
+
+[OpenCV-badge]: https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white
+[OpenCV-url]: https://opencv.org/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
