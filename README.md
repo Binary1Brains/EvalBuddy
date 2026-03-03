@@ -110,7 +110,7 @@ To get EvalBuddy running locally, follow these steps.
 
 1. Clone the repo
    ```sh
-   git clone [https://github.com/Binary1Brains/EvalBuddy.git](https://github.com/Binary1Brains/EvalBuddy.git)
+   git clone https://github.com/Binary1Brains/EvalBuddy.git
    cd EvalBuddy
 2. Install dependencies
    ```Bash
