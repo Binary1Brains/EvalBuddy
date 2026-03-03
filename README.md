@@ -12,7 +12,7 @@
 [issues-shield]: https://img.shields.io/github/issues/Binary1Brains/EvalBuddy?style=flat
 [issues-url]: https://github.com/Binary1Brains/EvalBuddy/issues
 
-[license-shield]: https://img.shields.io/github/license/Binary1Brains/EvalBuddy.svg?style=flat
+[license-shield]: https://img.shields.io/github/license/Binary1Brains/EvalBuddy?style=flat
 [license-url]: https://github.com/Binary1Brains/EvalBuddy/LICENSE
 
 <br />
@@ -38,6 +38,14 @@
     <a href="https://github.com/Binary1Brains/EvalBuddy/issues">Request Feature</a>
   </p>
 </div>
+
+<p align="center">
+  [![Contributors][contributors-shield]][contributors-url]
+  [![Forks][forks-shield]][forks-url]
+  [![Stars][stars-shield]][stars-url]
+  [![Issues][issues-shield]][issues-url]
+  [![License][license-shield]][license-url]
+</p>
 
 <details>
   <summary>Table of Contents</summary>
