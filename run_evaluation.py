@@ -6,7 +6,7 @@ from themis_evaluator import ThemisEvaluator
 from answer_parser import parse_student_answers
 
 semantic = SemanticEngine()   # optional, used as fallback for concepts
-kg = KnowledgeGraph("bolt://localhost:7687", "neo4j", "neo4j@7890#")
+kg = KnowledgeGraph("bolt://localhost:7687", "neo4j", "please_dont_check_diff")
 themis = ThemisEvaluator(offload_layers=10)
 
 with open("literature_questions.json", "r") as f:
