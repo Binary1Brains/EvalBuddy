@@ -66,7 +66,7 @@
 
 ## About The Project
 
-[![EvalBuddy Screen Shot][product-screenshot]](https://github.com/Binary1Brains/EvalBuddy)
+[![Login_screenshot][log]](https://github.com/Binary1Brains/EvalBuddy/beauty/ui.jpeg) | [![Dashboard][dash]](https://github.com/Binary1Brains/EvalBuddy) | [![Graph Screenshot][graph-screenshot]](https://github.com/Binary1Brains/EvalBuddy/beauty/ui_2.jpeg)
 
 EvalBuddy is designed to solve the "21st Century Grading Problem." While most assessment is digital, a vast amount of education still happens on paper. EvalBuddy bridges this gap by using a multi-stage AI pipeline to transcribe, evaluate, and map student knowledge.
 
@@ -98,13 +98,14 @@ To get EvalBuddy running locally, follow these steps.
 
 ### Installation
 
+(WE HEAVILY SUGGEST TO CREATE A PYTHON VENV)
+
 1. Clone the repo
    ```sh
    git clone [https://github.com/Binary1Brains/EvalBuddy.git](https://github.com/Binary1Brains/EvalBuddy.git)
 2. Install dependencies
-
-Bash
-pip install torch transformers sentence-transformers neo4j opencv-python symspellpy
+   ```Bash
+   pip install -r requirements.txt
 3. Set up your Neo4j credentials in run_evaluation.py
 
 4. Python
@@ -134,12 +135,13 @@ Graph Insights: Open your Neo4j browser to view the generated :KNOWS and :WEAK_I
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Contact
-Bhishal Sikdar - www.linkedin.com/in/bhishal-sikdar
-Parijat Dhar - www.linkedin.com/in/parijat-dhar-3b17a329a
-Soham Dutta - www.linkedin.com/in/soham-dutta-94630a29a
-Sumit Dey - www.linkedin.com/in/sumit-dey-3686842a3
+1. Bhishal Sikdar - www.linkedin.com/in/bhishal-sikdar
+2. Parijat Dhar - www.linkedin.com/in/parijat-dhar-3b17a329a
+3. Soham Dutta - www.linkedin.com/in/soham-dutta-94630a29a
+4. Sumit Dey - www.linkedin.com/in/sumit-dey-3686842a3
 
 Project Link: https://github.com/Binary1Brains/EvalBuddy
+Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
 
 [Python-badge]: https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white
 [Python-url]: https://www.python.org/
