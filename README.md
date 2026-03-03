@@ -164,6 +164,6 @@ Youtube video: https://www.youtube.com/watch?v=TUpcQ1S0bWM
 
 [log]: beauty/ui.jpeg
 [dash]: beauty/ui1.jpeg
-[graph-screenshot]: beauty/ui_2.jpeg
+[graph-screenshot]: beauty/ui2.jpeg
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
