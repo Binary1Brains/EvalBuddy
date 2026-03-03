@@ -39,13 +39,13 @@
   </p>
 </div>
 
-<p align="center">
+
   [![Contributors][contributors-shield]][contributors-url]
   [![Forks][forks-shield]][forks-url]
   [![Stars][stars-shield]][stars-url]
   [![Issues][issues-shield]][issues-url]
   [![License][license-shield]][license-url]
-</p>
+
 
 <details>
   <summary>Table of Contents</summary>
