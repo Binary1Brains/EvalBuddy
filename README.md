@@ -1,19 +1,19 @@
 <a id="readme-top"></a>
 
-[contributors-shield]: https://img.shields.io/github/contributors/Binary1Brains/EvalBuddy.svg?style=flat
+[contributors-shield]: https://img.shields.io/github/contributors/Binary1Brains/EvalBuddy?style=flat
 [contributors-url]: https://github.com/Binary1Brains/EvalBuddy/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/Binary1Brains/EvalBuddy.svg?style=flat
+[forks-shield]: https://img.shields.io/github/forks/Binary1Brains/EvalBuddy?style=flat
 [forks-url]: https://github.com/Binary1Brains/EvalBuddy/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/Binary1Brains/EvalBuddy.svg?style=flat
+[stars-shield]: https://img.shields.io/github/stars/Binary1Brains/EvalBuddy?style=flat
 [stars-url]: https://github.com/Binary1Brains/EvalBuddy/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/Binary1Brains/EvalBuddy.svg?style=flat
+[issues-shield]: https://img.shields.io/github/issues/Binary1Brains/EvalBuddy?style=flat
 [issues-url]: https://github.com/Binary1Brains/EvalBuddy/issues
 
 [license-shield]: https://img.shields.io/github/license/Binary1Brains/EvalBuddy.svg?style=flat
-[license-url]: https://github.com/Binary1Brains/EvalBuddy/blob/master/LICENSE.txt
+[license-url]: https://github.com/Binary1Brains/EvalBuddy/LICENSE
 
 <br />
 <div align="center">
