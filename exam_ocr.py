@@ -18,22 +18,18 @@ print("[INFO] Loading models...")
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 processor = TrOCRProcessor.from_pretrained("microsoft/trocr-small-handwritten")
 
-# Load fine-tuned model weights
 model = VisionEncoderDecoderModel.from_pretrained(
-    "/home/parijat/machine_learning/CU/trocr-handwriting/checkpoint-12000",
-    config="/home/parijat/machine_learning/CU/trocr-handwriting/checkpoint-12000/config.json"
+    "path_to_your/trocr-handwriting/checkpoint-12000",
+    config="path_to_your/trocr-handwriting/checkpoint-12000/config.json"
 ).to(device)
-model.eval()                                   # FIX: remove gradient checkpointing
+model.eval()
 
-# Spell correction
 sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
 dictionary_path = "/home/parijat/machine_learning/CU/frequency_dictionary_en_82_765.txt"
 if not sym_spell.load_dictionary(dictionary_path, term_index=0, count_index=1):
     print(f"[WARN] Could not load dictionary at {dictionary_path}")
 
-# ======================== ADD: Line segmentation functions ========================
 def preprocess_image(image_path, max_size=1600):
-    """Grayscale, denoise, CLAHE enhance for OCR"""
     img = cv2.imread(image_path)
     h, w = img.shape[:2]
     if max(h, w) > max_size:
@@ -47,22 +43,13 @@ def preprocess_image(image_path, max_size=1600):
     return gray
 
 def segment_lines(image, min_gap_height=10, min_line_height=20):
-    """
-    image: grayscale numpy array
-    returns list of (y0, y1) tuples for each detected line
-    """
-    # Binarize (inverse: text as white on black)
     _, binary = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
     h, w = binary.shape
+    projection = np.sum(binary, axis=1) // 255
 
-    # Horizontal projection: count ink pixels per row
-    projection = np.sum(binary, axis=1) // 255   # 0–w
-
-    # Threshold: rows with less than 5% ink are considered gaps
     gap_threshold = 0.05 * w
     gap_rows = projection < gap_threshold
 
-    # Identify contiguous non-gap blocks (lines)
     lines = []
     in_line = False
     start = 0
@@ -82,17 +69,14 @@ def segment_lines(image, min_gap_height=10, min_line_height=20):
     return lines
 
 def crop_image_slice(image, y0, y1, padding=5):
-    """Crop horizontal slice of image with padding"""
     y0 = max(y0 - padding, 0)
     y1 = min(y1 + padding, image.shape[0])
     return image[y0:y1, :]
 
 def recognize_image(image):
-    """Recognize a cropped image using TrOCR + spell correction + beam search"""
     pil_img = Image.fromarray(image).convert("RGB")
     pixel_values = processor(pil_img, return_tensors="pt").pixel_values.to(device)
     with torch.no_grad():
-        # ADD: beam search for better accuracy
         generated_ids = model.generate(
             pixel_values,
             max_new_tokens=256,
@@ -102,14 +86,12 @@ def recognize_image(image):
         )
     text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
 
-    # Spell correction
     suggestions = sym_spell.lookup_compound(text, max_edit_distance=2)
     if suggestions:
         text = suggestions[0].term
     return text
 
 def slice_and_recognize(image, num_slices=15):
-    """Fallback: split image into horizontal slices and OCR each"""
     h, w = image.shape[:2]
     slice_height = h // num_slices
     texts = []
@@ -126,12 +108,10 @@ def slice_and_recognize(image, num_slices=15):
     return "\n".join(texts)
 
 def process_page(image_path):
-    """Process one image page and return recognized text"""
-    preprocessed = preprocess_image(image_path)   # grayscale
+    preprocessed = preprocess_image(image_path)  
     lines = segment_lines(preprocessed)
 
     if not lines:
-        # Fallback: slice full page
         print(f"[INFO] No lines detected, using fallback slicing for {image_path}.")
         return slice_and_recognize(preprocessed, num_slices=20)
 
@@ -146,7 +126,6 @@ def process_page(image_path):
         page_text += line_text + "\n"
     return page_text
 
-# ======================== Main function ========================
 def main():
     output_dir = "student_ocrs"
     os.makedirs(output_dir, exist_ok=True)
