@@ -1,0 +1,34 @@
+[
+  {
+    "qid": "Q1",
+    "question": "Discuss the theme of The Time Machine.",
+    "answer": "press the time machine written in britain in 1895 is the product\nof an era of great anxiety about social class and economic\ninequality the industrial resolution of the eighteenth and\nnineteenth century had generated incredible wealth in britain\nbut that wealth went almost entirely to the upper classes\ninstead of being equally distributed to the lower class worker\nthis puts in sharp contract of the state system in the victorian\nengland edi's representing the elite class passing beauty\nchair technology but looking physical strength whereas the\nprotectors are monstrous lacks intellect and one junior under\ncontrol of the states who expresses them for this own gains",
+    "themis_score": 2,
+    "themis_feedback": "The provided answer attempts to address the theme of The Time Machine by mentioning issues of social class and economic inequality in Victorian England. However, the answer is poorly structured, lacks coherence, and does not clearly convey the main idea of class conflict and social criticism as depicted in the novel. The mention of 'press the time machine written in britain in 1895' is confusing and does not relate clearly to the rest of the content. The latter part of the answer attempts to describe the Eloi and Morlocks, but the language is unclear, and the concepts are not fully developed or correctly represented. The student does touch on some of the key concepts, such as class conflict, but fails to articulate them effectively.",
+    "themis_strengths": [
+      "The answer attempts to discuss the theme of the book, which shows an understanding of the assignment."
+    ],
+    "themis_weaknesses": [
+      "Poor structure and coherence",
+      "Confusing introduction with the phrase 'press the time machine written in britain in 1895'",
+      "Lack of clarity in describing the Eloi and Morlocks",
+      "Ineffective representation of the key concepts"
+    ],
+    "covered_concepts": [
+      "Class conflict",
+      "Social criticism",
+      "Caste system",
+      "Oppression",
+      "Eloi upper class",
+      "Morlocks oppressed lower class"
+    ],
+    "missing_concepts": [
+      "Industrial Revolution's impact on wealth distribution",
+      "Dehumanizing effects of exploitation",
+      "Intellectual and physical weakness of the Eloi",
+      "The Morlocks' lack of intellect and their control by the elite",
+      "The state system in Victorian England"
+    ],
+    "semantic_score": 0.397
+  }
+]

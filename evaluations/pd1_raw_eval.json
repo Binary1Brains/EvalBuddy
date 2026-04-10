@@ -1,0 +1,22 @@
+[
+  {
+    "qid": "Q1",
+    "question": "Discuss the theme of The Time Machine.",
+    "answer": "$$\n\\lim_{\\\\lambda\\rightarrow0} \\frac{\\sum_{i=1}^{n} i \\lambda4 \\pi} {\\sum_{j=1}^{n} j \\\\lambda}\n$$",
+    "themis_score": 1,
+    "themis_feedback": "The provided answer is not at all relevant to the question. It appears to be a mathematical expression with no clear connection to the theme of 'The Time Machine,' which is supposed to be discussed. The answer does not address class conflict, social criticism, or any other related concept. It seems like there is a misunderstanding of the task, as the answer does not reflect an understanding of the literary theme at all.",
+    "themis_strengths": [],
+    "themis_weaknesses": [],
+    "covered_concepts": [],
+    "missing_concepts": [
+      "class conflict",
+      "social criticism",
+      "caste system",
+      "oppression",
+      "oppressed working class",
+      "Eloi upper class",
+      "Morlocks oppressed lower class"
+    ],
+    "semantic_score": -0.008
+  }
+]

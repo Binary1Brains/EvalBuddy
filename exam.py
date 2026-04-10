@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3.11
 """
 Unified OCR pipeline with YOLO layout detection, line‑level TrOCR,
@@ -37,7 +38,7 @@ FLOWCHART_SCRIPT      = "/home/parijat/machine_learning/CU_test/FlowChart-Recogn
 TROCR_CHECKPOINT      = "/home/parijat/machine_learning/CU_test/trocr-handwriting/checkpoint-12000"
 SYMSPELL_DICT         = "/home/parijat/machine_learning/CU_test/frequency_dictionary_en_82_765.txt"
 
-flowchart_model = None   # No flowchart YOLO model – using external script
+flowchart_model = None  
 
 try:
     nltk.data.find("corpora/words.zip")
@@ -53,6 +54,7 @@ if not sym_spell.load_dictionary(SYMSPELL_DICT, term_index=0, count_index=1):
 def correct_text(raw_text, context="", student_id="", page_num=0, line_num=0):
     suggestions = sym_spell.lookup_compound(raw_text, max_edit_distance=2)
     return suggestions[0].term if suggestions else raw_text
+
 
 print("[INFO] Loading YOLO layout model …")
 layout_model = YOLO(LAYOUT_MODEL_PATH)
@@ -205,6 +207,7 @@ def process_flowchart_external(crop):
             os.remove(temp_img)
         if os.path.exists(temp_dir):
             shutil.rmtree(temp_dir)
+
 
 def detect_layout(img):
     results = layout_model(img)[0]

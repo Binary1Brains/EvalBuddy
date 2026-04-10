@@ -1,0 +1,42 @@
+[
+  {
+    "qid": "Q1",
+    "question": "Discuss the theme of The Time Machine.",
+    "answer": "steve\na\ni accept no from i\ni use in in a",
+    "themis_score": 1,
+    "themis_feedback": "The provided answer'steve' does not address the question at all. It seems like a random string of words rather than an attempt to discuss the theme of 'The Time Machine.' There is no indication that the student understood the question about the theme of class conflict and social criticism in the context of the novel. The response does not meet the criteria of correctness, completeness, or clarity.",
+    "themis_strengths": [],
+    "themis_weaknesses": [],
+    "covered_concepts": [],
+    "missing_concepts": [
+      "class conflict",
+      "social criticism",
+      "caste system",
+      "oppression",
+      "oppressed working class",
+      "Eloi upper class",
+      "Morlocks oppressed lower class"
+    ],
+    "semantic_score": 0.059
+  },
+  {
+    "qid": "Q2",
+    "question": "Explain the significance of the green light in The Great Gatsby.",
+    "answer": "i display i\nstop",
+    "themis_score": 1,
+    "themis_feedback": "The provided answer is incoherent and does not address the question at all. It consists of a partial sentence that does not make sense in the context of the question asked. The answer does not mention the green light, its symbolism, or any related concepts.",
+    "themis_strengths": [],
+    "themis_weaknesses": [
+      "The response is entirely lacking in content relevant to the question."
+    ],
+    "covered_concepts": [],
+    "missing_concepts": [
+      "green light",
+      "symbolism",
+      "hope",
+      "dreams",
+      "Daisy"
+    ],
+    "semantic_score": 0.001
+  }
+]

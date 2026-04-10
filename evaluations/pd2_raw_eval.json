@@ -1,0 +1,22 @@
+[
+  {
+    "qid": "Q1",
+    "question": "Discuss the theme of The Time Machine.",
+    "answer": "#\n( ( Steve )\n# V.\nI Accept no , from I\nI use in in a\n# #\nI Display . I\n# 2Stop ( #",
+    "themis_score": 1,
+    "themis_feedback": "The provided answer is incoherent and does not address the question at all. It consists of a series of disconnected symbols and words without any discernible structure or relevance to the theme of 'The Time Machine'. There is no indication that the student understood the question about the theme of class conflict and social criticism as depicted in the novel.",
+    "themis_strengths": [],
+    "themis_weaknesses": [],
+    "covered_concepts": [],
+    "missing_concepts": [
+      "class conflict",
+      "social criticism",
+      "caste system",
+      "oppression",
+      "oppressed working class",
+      "Eloi upper class",
+      "Morlocks oppressed lower class"
+    ],
+    "semantic_score": 0.029
+  }
+]

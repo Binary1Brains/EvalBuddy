@@ -1,81 +1,90 @@
-from neo4j import GraphDatabase
+import mysql.connector
+import json
 
 class KnowledgeGraph:
-
-    def __init__(self, uri, user, password):
-        self.driver = GraphDatabase.driver(uri, auth=(user, password))
+    def __init__(self, host, user, password, database):
+        self.conn = mysql.connector.connect(
+            host=host,
+            user=user,
+            password=password,
+            database=database
+        )
+        self.cursor = self.conn.cursor(dictionary=True)
 
     def close(self):
-        self.driver.close()
+        self.cursor.close()
+        self.conn.close()
+
+    def _get_student_internal_id(self, student_id):
+        self.cursor.execute("SELECT id FROM students WHERE student_id = %s", (student_id,))
+        row = self.cursor.fetchone()
+        return row['id'] if row else None
+
+    def _get_concept_internal_id(self, concept_name):
+        self.cursor.execute("SELECT id FROM concept_nodes WHERE name = %s", (concept_name,))
+        row = self.cursor.fetchone()
+        return row['id'] if row else None
 
     def create_student(self, student_id, name):
-        query = """
-        MERGE (s:Student {id:$id})
-        SET s.name = $name
-        """
-        with self.driver.session() as session:
-            session.run(query, id=student_id, name=name)
+        self.cursor.execute(
+            "INSERT IGNORE INTO students (student_id, name) VALUES (%s, %s)",
+            (student_id, name)
+        )
+        self.conn.commit()
 
     def create_concept(self, concept, topic):
-        query = """
-        MERGE (c:Concept {name:$name})
-        SET c.topic = $topic
-        """
-        with self.driver.session() as session:
-            session.run(query, name=concept, topic=topic)
+        self.cursor.execute(
+            "INSERT IGNORE INTO concept_nodes (name, topic) VALUES (%s, %s)",
+            (concept, topic)
+        )
+        self.conn.commit()
 
     def create_question(self, qid, topic):
-        query = """
-        MERGE (q:Question {id:$id})
-        SET q.topic = $topic
-        """
-        with self.driver.session() as session:
-            session.run(query, id=qid, topic=topic)
+        pass
 
     def link_question_concepts(self, qid, concepts):
-        query = """
-        MATCH (q:Question {id:$qid})
-        MATCH (c:Concept {name:$concept})
-        MERGE (q)-[:HAS_CONCEPT]->(c)
-        """
-        with self.driver.session() as session:
-            for c in concepts:
-                session.run(query, qid=qid, concept=c)
+        pass
 
     def mark_answer(self, student_id, qid, covered, missing):
-        with self.driver.session() as session:
-
-            session.run("""
-            MATCH (s:Student {id:$sid}), (q:Question {id:$qid})
-            MERGE (s)-[:ANSWERED]->(q)
-            """, sid=student_id, qid=qid)
-
-            for c in covered:
-                session.run("""
-                MATCH (s:Student {id:$sid}), (c:Concept {name:$c})
-                MERGE (s)-[:KNOWS]->(c)
-                """, sid=student_id, c=c)
-
-            for c in missing:
-                session.run("""
-                MATCH (s:Student {id:$sid}), (c:Concept {name:$c})
-                MERGE (s)-[:WEAK_IN]->(c)
-                """, sid=student_id, c=c)
+        sid = self._get_student_internal_id(student_id)
+        if not sid:
+            return
+        for c in covered:
+            cid = self._get_concept_internal_id(c)
+            if cid:
+                self.cursor.execute(
+                    "INSERT IGNORE INTO student_concept (student_id, concept_id, relationship) VALUES (%s, %s, 'KNOWS')",
+                    (sid, cid)
+                )
+        for c in missing:
+            cid = self._get_concept_internal_id(c)
+            if cid:
+                self.cursor.execute(
+                    "INSERT IGNORE INTO student_concept (student_id, concept_id, relationship) VALUES (%s, %s, 'WEAK_IN')",
+                    (sid, cid)
+                )
+        self.conn.commit()
 
     def get_weak_concepts(self, student_id):
-        query = """
-        MATCH (s:Student {id:$sid})-[:WEAK_IN]->(c:Concept)
-        RETURN c.name AS weak
-        """
-        with self.driver.session() as session:
-            return [r["weak"] for r in session.run(query, sid=student_id)]
+        sid = self._get_student_internal_id(student_id)
+        if not sid:
+            return []
+        self.cursor.execute("""
+            SELECT c.name
+            FROM student_concept sc
+            JOIN concept_nodes c ON sc.concept_id = c.id
+            WHERE sc.student_id = %s AND sc.relationship = 'WEAK_IN'
+        """, (sid,))
+        return [row['name'] for row in self.cursor.fetchall()]
 
     def recommend_topics(self, student_id):
-        query = """
-        MATCH (s:Student {id:$sid})-[:WEAK_IN]->(c:Concept)
-        RETURN DISTINCT c.topic AS topic
-        """
-        with self.driver.session() as session:
-            return [r["topic"] for r in session.run(query, sid=student_id)]        
-        
-          
+        sid = self._get_student_internal_id(student_id)
+        if not sid:
+            return []
+        self.cursor.execute("""
+            SELECT DISTINCT c.topic
+            FROM student_concept sc
+            JOIN concept_nodes c ON sc.concept_id = c.id
+            WHERE sc.student_id = %s AND sc.relationship = 'WEAK_IN'
+        """, (sid,))
+        return [row['topic'] for row in self.cursor.fetchall()]

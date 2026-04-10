@@ -8,7 +8,7 @@ from transformers import (
     Seq2SeqTrainingArguments
 )
 from torchvision import transforms
-import evaluate       
+import evaluate                
 import numpy as np
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -59,13 +59,16 @@ def collate_fn(batch):
         "pixel_values": pixel_values,
         "labels": labels,
     }
+
 cer_metric = evaluate.load("cer")
 
 def compute_metrics(eval_pred):
     predictions, labels = eval_pred
     labels = np.where(labels != -100, labels, processor.tokenizer.pad_token_id)
+    
     pred_str = processor.tokenizer.batch_decode(predictions, skip_special_tokens=True)
     label_str = processor.tokenizer.batch_decode(labels, skip_special_tokens=True)
+    
     cer = cer_metric.compute(predictions=pred_str, references=label_str)
     return {"cer": cer}
 
@@ -87,9 +90,9 @@ training_args = Seq2SeqTrainingArguments(
     learning_rate=2e-5,
     warmup_steps=500,
     lr_scheduler_type="linear",
-    load_best_model_at_end=True,
-    metric_for_best_model="cer",
-    greater_is_better=False,
+    load_best_model_at_end=True,        # Now works because we have compute_metrics
+    metric_for_best_model="cer",         # We return "cer" in compute_metrics
+    greater_is_better=False,             # Lower CER is better
 )
 
 trainer = Seq2SeqTrainer(
@@ -98,8 +101,8 @@ trainer = Seq2SeqTrainer(
     train_dataset=train_dataset,
     eval_dataset=val_dataset,
     data_collator=collate_fn,
-    compute_metrics=compute_metrics,
-    tokenizer=processor.tokenizer,
+    compute_metrics=compute_metrics,    
+    tokenizer=processor.tokenizer,      
 )
 
 trainer.train()

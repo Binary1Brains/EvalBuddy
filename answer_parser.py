@@ -1,8 +1,4 @@
 def parse_student_answers(text, question_bank):
-    """
-    Split student's text into answer blocks and align with question_bank.
-    Returns list of dicts with keys: qid, question, answer, model_answer, concepts.
-    """
     blocks = [block.strip() for block in text.split('\n\n') if block.strip()]
     answers = []
     for i, block in enumerate(blocks):
