@@ -163,11 +163,11 @@ Graph Insights: Open your Neo4j browser to view the generated :KNOWS and :WEAK_I
 
 [ ] Multi-language Handwriting Support
 
-[ ] Multi subject support (LATEXOCR, FR-DETR)
+[x] Multi subject support (LATEXOCR, FR-DETR)
 
-[ ] Real-time Teacher Dashboard UI
+[x] Real-time Teacher Dashboard UI
 
-[ ] Backend 
+[x] Backend 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
